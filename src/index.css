@@ -3,7 +3,12 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
-@@ -10,9 +12,10 @@ body,
+}
+body,
+#root {
+  height: 100vh;
+  margin: 0;
+}
 body,
 input,
 select,
@@ -11,11 +16,15 @@ button,
 textarea {
   font-family: Montserrat, Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
-  font-family: Helvetica, Arial, sans-serif;
 }
 
 .grid-container {
-@@ -25,6 +28,9 @@ textarea {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: 5rem 1fr 5rem;
   grid-template-columns: 1fr;
   height: 100%;
 }
@@ -25,7 +34,27 @@ a {
 a:hover {
   color: #ff8000;
 }
-@@ -51,3 +57,65 @@ footer {
+header {
+  grid-area: header;
+  background-color: #203040;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+header a {
+  color: #ffffff;
+  text-decoration: none;
+}
+main {
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+  background-color: #203040;
+  color: #ffffff;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
